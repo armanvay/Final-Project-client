@@ -143,14 +143,13 @@ const Page = async ({ params }) => {
                     
 
                     {/* Action Button: Apply Routing Link Container */}
-                    <Button
-                        as={Link}
+                    <Link
                         href={`/jobs/${id}/apply`}
                         className="w-full bg-purple-600 hover:bg-purple-500 text-white font-medium py-6 rounded-xl shadow-lg transition-colors flex items-center justify-center gap-2"
                         endContent={<ArrowUpRight className="w-4 h-4" />}
                     >
                         Apply For This Job
-                    </Button>
+                    </Link>
                 </aside>
 
             </div>

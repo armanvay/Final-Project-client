@@ -27,9 +27,24 @@ export default function Navbar() {
     },
     {
       label: "Pricing",
-      href: "/pricing",
+      href: "/plans",
     },
   ];
+
+
+  const dashboardLink = {
+    seeker: "dashboard/seeker",
+    recruiter: "dashboard/recruiter",
+  };
+
+
+
+  if(user?.email){
+    navLinks.push({
+      label: "Dashboard",
+      href: dashboardLink[user?.role || "seeker"],
+    });
+  }
 
   return (
     <nav className="sticky top-0 z-50 border-b border-white/10 bg-[#0B0B0F]/80 backdrop-blur-xl">
