@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { Button } from "@heroui/react";
 import { useSession, signOut } from "@/lib/auth-client";
+import { admin } from "better-auth/plugins";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -35,6 +36,7 @@ export default function Navbar() {
   const dashboardLink = {
     seeker: "dashboard/seeker",
     recruiter: "dashboard/recruiter",
+    admin: "dashboard/admin",
   };
 
 
